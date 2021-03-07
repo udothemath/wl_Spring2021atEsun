@@ -7,3 +7,6 @@
 #### Gnn_Try.ipynb (03.03.2021)
 - My first trying GNN code 
 - from https://www.pytorchtutorial.com/pytorch-geometric-for-gnn/#SageConv
+
+### Node Classification (Cora dataset)
+- from https://colab.research.google.com/drive/14OvFnAXggxB8vM4e8vSURUp1TaKnovzX?usp=sharing vis PyTorch geometric
