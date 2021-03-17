@@ -11,3 +11,8 @@
 #### Node_Classification (07.03.2021)
 - (Cora dataset)
 - from https://colab.research.google.com/drive/14OvFnAXggxB8vM4e8vSURUp1TaKnovzX?usp=sharing vis PyTorch geometric
+
+#### Autoencoder and KNN for Credit Card Fraud Detection (17.03.2021)
+- Dataset from Kaggle : https://www.kaggle.com/mlg-ulb/creditcardfraud
+- Autoencoder code from https://github.com/vimalkansal/credit_card_fraud_detection/blob/master/project/credit_card_fraud_detection.ipynb
+- KNN code from https://www.kaggle.com/maneesha96/fraud-detection-in-transaction-data-using-knn#7.-Data-splitting
