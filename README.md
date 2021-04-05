@@ -16,3 +16,6 @@
 - Dataset from Kaggle : https://www.kaggle.com/mlg-ulb/creditcardfraud
 - Autoencoder code from https://github.com/vimalkansal/credit_card_fraud_detection/blob/master/project/credit_card_fraud_detection.ipynb
 - KNN code from https://www.kaggle.com/maneesha96/fraud-detection-in-transaction-data-using-knn#7.-Data-splitting
+
+#### GCN,GAT.GraphSage for Cora dataset (04.05.2021)
+- use pytorch geometric
