@@ -1,22 +1,41 @@
-# wl_Spring2021atEsun
-## Weile's code for practice
+# DGCF
 
-#### GCN,GAT.GraphSage for Cora dataset (04.05.2021)
-- use pytorch geometric
+The source code and dataset for ICDM2020 paper: Dynamic Graph Collaborative Filtering, implemented in Pytorch.
 
-#### Autoencoder and KNN for Credit Card Fraud Detection (17.03.2021)
-- Dataset from Kaggle : https://www.kaggle.com/mlg-ulb/creditcardfraud
-- Autoencoder code from https://github.com/vimalkansal/credit_card_fraud_detection/blob/master/project/credit_card_fraud_detection.ipynb
-- KNN code from https://www.kaggle.com/maneesha96/fraud-detection-in-transaction-data-using-knn#7.-Data-splitting
+Our code mainly mainly refers to jodie: https://github.com/srijankr/jodie/, data download method, running environment and initialization are the same as jodie.
 
-#### Node_Classification (07.03.2021)
-- (Cora dataset)
-- from https://colab.research.google.com/drive/14OvFnAXggxB8vM4e8vSURUp1TaKnovzX?usp=sharing vis PyTorch geometric
+## Usage
+# python3 evaluate_all.py --network Esun_week --model DGCF --method attention --adj
+### Train model
+To train the DGCF model using the ```data/<network>.csv``` dataset, use the following command. This will save a model for every epoch in the ```saved_models/<network>/``` directory.
 
-#### GCN_karate_network.ipynb (03.03.2021)
-- Node classification on a graph
-- from https://colab.research.google.com/drive/1CILdAekIkIh-AX2EXwZ3ZsZ6VcCbwc0t?usp=sharing#scrollTo=F2B3X6tf9YpS
+```python DGCF.py --network <network> --model DGCF --epochs 50 --method attention  --adj  ```
 
-#### Gnn_Try.ipynb (03.03.2021)
-- My first GNN code 
-- from https://www.pytorchtutorial.com/pytorch-geometric-for-gnn/#SageConv
+This code can be given the following command-line arguments:
+
+```--network:``` choose to the train data:```reddit\wikipedia\lastfm```
+
+```--model:``` this is the name of the model  
+
+```--epochs:```  this is the maximum number of interactions to train the model.
+
+```--embedding_dim:``` this is the number of dimensions of the dynamic embedding.
+
+```--method:```  this is the type of aggregator function in second-order aggregation
+
+```--adj:```  this is a boolean input indicating if use the second update.
+
+```--length：``` this is  the aggregator size in second-order aggegator function.
+
+
+### Evaluate the model
+
+To evaluate the performance of the interaction prediction task in one epoch, use the following command:
+
+```python  evaluate_interaction_prediction.py --network   --model  --method ```
+
+To evaluate the performance of the interaction prediction task in all epoch, user the followinig command:
+
+```python  evaluate_all.py --network  --model --method```
+
+For detailed code execution, you can refer to the command line in the ```./Shell``` folder.
