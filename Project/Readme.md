@@ -11,7 +11,7 @@
 
 # DGCF : Dynamic Graph Collaborative Filtering
 - Copy and slightly modify from https://github.com/CRIPAC-DIG/DGCF
--  git clone https://github.com/udothemath/wl_Spring2021atEsun/tree/main/Project
+-  git clone https://github.com/udothemath/wl_Spring2021atEsun/tree/main/Project/DGCF
 - Usage : 
   - 1. The data must be converted to the csv form with column (user_id, item_id, timestamp, state_label, feature1, feature2)
         - Can refer to DGCF/data/Esun_week.csv
