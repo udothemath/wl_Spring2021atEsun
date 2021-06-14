@@ -1,3 +1,8 @@
+# Smore 
+- Graph embedding package developed by NCCU and Academic Sinica
+- Source: https://github.com/cnclabs/smore
+- I add a folder named ESUN_data in the package
+
 # Random Recommendation
 - Contains 4 ways: week as user, time as user, week&time as user, whole train data as user
 - For each way, get all items in train data, remove duplicates.
