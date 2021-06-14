@@ -1,0 +1,29 @@
+
+========= Deep_Walk_week_without_feature =========
+Average rec@3 of 100 result : 0.0009594706368899917
+Average rec@5 of 100 result : 0.0016708023159636063
+Average rec@10 of 100 result : 0.003705541770057899
+========= Hop_Rec_week_without_feature =========
+Average rec@3 of 100 result : 0.02453267162944582
+Average rec@5 of 100 result : 0.04190239867659223
+Average rec@10 of 100 result : 0.08312655086848635
+========= Hop_Rec_time_without_feature =========
+Average rec@3 of 100 result : 0.020388751033912324
+Average rec@5 of 100 result : 0.03416046319272126
+Average rec@10 of 100 result : 0.06976840363937138
+========= Hop_Rec_weektime_without_feature =========
+Average rec@3 of 100 result : 0.02813068651778329
+Average rec@5 of 100 result : 0.044714640198511166
+Average rec@10 of 100 result : 0.08186931348221671
+========= Hop_Rec_week_with_feature =========
+Average rec@3 of 100 result : 0.03887510339123242
+Average rec@5 of 100 result : 0.06262200165425971
+Average rec@10 of 100 result : 0.12660049627791564
+========= Hop_Rec_time_with_feature =========
+Average rec@3 of 100 result : 0.02817204301075269
+Average rec@5 of 100 result : 0.04282051282051282
+Average rec@10 of 100 result : 0.11216708023159637
+========= Hop_Rec_weektime_with_feature =========
+Average rec@3 of 100 result : 0.03854425144747725
+Average rec@5 of 100 result : 0.06382961124896608
+Average rec@10 of 100 result : 0.11534325889164598
