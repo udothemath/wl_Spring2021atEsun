@@ -4,7 +4,7 @@
 - I add a folder named ESUN_data in the package
 - Compilation : 
     ```
-    $ git clone https://github.com/cnclabs/smore
+    $ git clone https://github.com/udothemath/wl_Spring2021atEsun/tree/main/Project/smore
     $ cd smore
     $ make
     ```
