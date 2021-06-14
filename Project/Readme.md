@@ -2,6 +2,12 @@
 - Graph embedding package developed by NCCU and Academic Sinica
 - Source: https://github.com/cnclabs/smore
 - I add a folder named ESUN_data in the package
+- Compilation : 
+    ```
+    $ git clone https://github.com/cnclabs/smore
+    $ cd smore
+    $ make
+    ```
 
 # Random Recommendation
 - Contains 4 ways: week as user, time as user, week&time as user, whole train data as user
