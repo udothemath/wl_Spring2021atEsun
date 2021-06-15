@@ -79,7 +79,7 @@ def scores_then_recall(filename, test, recall_num, user_node, user_start, method
 start_time = time.time()
 dir_path = args.dir_path
 filename = os.listdir(dir_path)
-scores_then_recall(filename, args.test, args.recall_num, args.user_node, args.method)
+scores_then_recall(filename, args.test, args.recall_num, args.user_node, args.user_start, args.method)
 print("--- %s seconds ---" % (time.time() - start_time))
 
 
