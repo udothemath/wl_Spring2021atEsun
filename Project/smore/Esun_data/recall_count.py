@@ -17,6 +17,7 @@ print('\n',args)
 
 def scores_then_recall(filename, test, recall_num, user_node, user_start, method = None):
     S = [0 for i in range(len(recall_num))]
+    Prec = [0 for i in range(len(recall_num))]
     test = pd.read_csv(test,  delim_whitespace=True)
     for txt in filename:
         txt = os.path.join(dir_path,txt)
@@ -58,12 +59,22 @@ def scores_then_recall(filename, test, recall_num, user_node, user_start, method
 
 
         for num in range(len(recall_num)):
+            # Recall@num
             s = 0
             for i in range(len(test_item)):
                 for idx in range(user_node):
                     if list(test['user_id'])[i]==idx and test_item[i] in rec_list[idx][0:recall_num[num]]:
                         s+=1
             S[num]+=s
+
+            # Precision@num
+            P = 0
+            for idx in range(user_node):
+                K = list(set(test[test['user_id']==idx]['item_id']) & set(rec_list[idx][0:recall_num[num]]))
+                P+= len(K)/recall_num[num]
+            Prec[num] = P/user_node
+
+
 
     if method != None :
         fw = open('../Esun_data/result/recall_save_file.txt', "a")
@@ -74,7 +85,9 @@ def scores_then_recall(filename, test, recall_num, user_node, user_start, method
     for i in range(len(recall_num)):
         
         fw.write(f'\nAverage rec@{recall_num[i]} of {len(filename)} result : {S[i]}')
+        fw.write(f'\nAverage prec@{recall_num[i]} of {len(filename)} result : {Prec[i]}')
         print(f'Average rec@{recall_num[i]} of {len(filename)} result :',S[i])
+        print(f'Average prec@{recall_num[i]} of {len(filename)} result :',Prec[i])
 
 start_time = time.time()
 dir_path = args.dir_path
