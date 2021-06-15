@@ -1,7 +1,7 @@
 # Smore 
 - Graph embedding package developed by NCCU and Academic Sinica
 - Source: https://github.com/cnclabs/smore
-- I add a folder named Esun_data in the package
+- I add a folder named Esun_data in the package, which use DeepWalk and Hoprec in Esun dataset 
 - Compilation : 
     ```
     $ git clone https://github.com/udothemath/wl_Spring2021atEsun/tree/main/Project/smore
