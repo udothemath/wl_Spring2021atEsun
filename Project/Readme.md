@@ -1,7 +1,14 @@
+# Node2vec
+- Graph embedding method developed by Stanford University
+- Source: https://github.com/aditya-grover/node2vec
+- I add a folder named Esun_data in the package, which apply Node2vec to Esun dataset 
+- There are some subfolders and files contained in **Esun_data**:
+    - **data**: Contained train and test csv after preprocess
+
 # Smore 
 - Graph embedding package developed by NCCU and Academic Sinica
 - Source: https://github.com/cnclabs/smore
-- I add a folder named Esun_data in the package, which use DeepWalk and Hoprec in Esun dataset 
+- I add a folder named Esun_data in the package, which apply DeepWalk and Hoprec to Esun dataset 
 - Compilation : 
     ```
     $ git clone https://github.com/udothemath/wl_Spring2021atEsun/tree/main/Project/smore
