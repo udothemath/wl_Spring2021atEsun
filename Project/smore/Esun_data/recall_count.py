@@ -72,7 +72,7 @@ def scores_then_recall(filename, test, recall_num, user_node, user_start, method
             for idx in range(user_node):
                 K = list(set(test[test['user_id']==idx]['item_id']) & set(rec_list[idx][0:recall_num[num]]))
                 P+= len(K)/recall_num[num]
-            Prec[num] = P/user_node
+            Prec[num] += P/user_node
 
 
 
