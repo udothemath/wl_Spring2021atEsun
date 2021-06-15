@@ -1,14 +1,20 @@
 # Smore 
 - Graph embedding package developed by NCCU and Academic Sinica
 - Source: https://github.com/cnclabs/smore
-- I add a folder named ESUN_data in the package
+- I add a folder named Esun_data in the package
 - Compilation : 
     ```
     $ git clone https://github.com/udothemath/wl_Spring2021atEsun/tree/main/Project/smore
     $ cd smore
     $ make
     ```
-
+- There are some subfolders and files contained in **Esun_data**:
+    - **data**: Contained train and test csv after preprocess
+    - **result**: Contained embedding results, and a txt file which save precision@K and recall@K
+    - **deepwalk.sh**: Run this command ```sh deepwalk.sh``` to get the embeddings and results of deepwalk
+    - **hoprec.sh**: Run this command ```sh hoprec.sh``` to get the embeddings and results of hoprec
+    - **recall_count.py**: Calculate the inner product of embeddings to get the recommendation list, then calculate the precision@K and recall@K
+    
 # Random Recommendation
 - Contains 4 ways: week as user, time as user, week&time as user, whole train data as user
 - For each way, get all items in train data, remove duplicates.
