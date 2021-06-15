@@ -82,6 +82,7 @@ def scores_then_recall(filename, test, recall_num, user_node, user_start, method
         print(f'========= {method} =========')
 
     S = np.array(S)/len(test)/len(filename)
+    Prec = np.array(Prec)/len(filename)
     for i in range(len(recall_num)):
         
         fw.write(f'\nAverage rec@{recall_num[i]} of {len(filename)} result : {S[i]}')
