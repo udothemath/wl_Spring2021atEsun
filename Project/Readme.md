@@ -14,7 +14,8 @@
     - **deepwalk.sh**: Run this command ```sh deepwalk.sh``` to get the embeddings and results of deepwalk
     - **hoprec.sh**: Run this command ```sh hoprec.sh``` to get the embeddings and results of hoprec
     - **recall_count.py**: Calculate the inner product of embeddings to get the recommendation list, then calculate the precision@K and recall@K
-    
+- Usage example (After compilation) :
+    - ```cd Esun_data/```, then ```sh deepwalk.sh```
 # Random Recommendation
 - Contains 4 ways: week as user, time as user, week&time as user, whole train data as user
 - For each way, get all items in train data, remove duplicates.
