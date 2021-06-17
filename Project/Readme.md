@@ -36,7 +36,7 @@
         - Example :   ```python3 DGCF.py --network Esun_week --model DGCF --epochs 50 --method attention --adj```  
         - After that, a folder of models will be generated (since the model size is large, so I do not upload it)
   - 3. To evaluate the result for test data, apply command line: Example ```python3 evaluate_all.py --network Esun_week --model DGCF --method attention --adj```
-        - Every epoch in step2 will generate a model, so after evaluate all, we have 50 test result in a txt file, saved in the folder **results**
+        - Every epoch in step b will generate a model, so after evaluate all, we have 50 test result in a txt file, saved in the folder **results**
 - Note : 
   - The original code use 0.8 for train, 0.1 for validation and 0.1 for train
   - I modify the code to 0.8 for train and 0.2 for test
