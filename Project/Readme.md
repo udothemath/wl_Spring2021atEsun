@@ -23,16 +23,7 @@
     - **recall_count.py**: Calculate the inner product of embeddings to get the recommendation list, then calculate the precision@K and recall@K
 - Usage example (After compilation) :
     - ```cd Esun_data/```, then ```sh deepwalk.sh```
-# Random Recommendation
-- Contains 4 ways: week as user, time as user, week&time as user, whole train data as user
-- For each way, get all items in train data, remove duplicates.
-- For each row in test data, generate a random list of recommend items with length 10
-- Calculate the recall
 
-# Top 10 Sales Recommendation
-- Contains 4 ways: week as user, time as user, week&time as user, whole train data as user
-- For each way, get top10 sales items for each user(peroid, eg in week, we have Monday top 10 sales list, .. , Sunday top 10 sales list) in train data
-- Calculate the recall for test data
 
 # DGCF : Dynamic Graph Collaborative Filtering
 - Copy and slightly modify from https://github.com/CRIPAC-DIG/DGCF
@@ -49,3 +40,16 @@
 - Note : 
   - The original code use 0.8 for train, 0.1 for validation and 0.1 for train
   - I modify the code to 0.8 for train and 0.2 for test
+
+# Random Recommendation
+- Contains 4 ways: week as user, time as user, week&time as user, whole train data as user
+- For each way, get all items in train data, remove duplicates.
+- For each row in test data, generate a random list of recommend items with length 10
+- Calculate the recall
+
+# Top 10 Sales Recommendation
+- Contains 4 ways: week as user, time as user, week&time as user, whole train data as user
+- For each way, get top10 sales items for each user(peroid, eg in week, we have Monday top 10 sales list, .. , Sunday top 10 sales list) in train data
+- Calculate the recall for test data
+
+
