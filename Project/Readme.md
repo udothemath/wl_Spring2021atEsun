@@ -1,7 +1,17 @@
+# Jodie: Predicting Dynamic Embedding Trajectory in Temporal Interaction Networks
+- Temporal networks developed by Stanford University
+- Copy and slightly modify from https://github.com/CRIPAC-DIG/DGCF
+- ```$ git clone https://github.com/udothemath/wl_Spring2021atEsun/tree/main/Project/jodie```
+- I add a folder named **data** in the package, which contains (train+test) data according to time in one csv file
+    - The data must be converted to the csv form with columns (user_id, item_id, timestamp, state_label, feature1, feature2)
+    - Can refer to ```data/Esun_week.csv```
+- Usage:
+
+
 # Node2vec
 - Graph embedding method developed by Stanford University
 - Source: https://github.com/aditya-grover/node2vec
-- I add a folder named Esun_data in the package, which apply Node2vec to Esun dataset 
+- I add a folder named **Esun_data** in the package, which apply Node2vec to Esun dataset 
 - There are some subfolders and files contained in **Esun_data**:
     - **data**: Contained train and test csv after preprocess
 
