@@ -32,9 +32,9 @@
   - 1. The data must be converted to the csv form with columns (user_id, item_id, timestamp, state_label, feature1, feature2)
         - Can refer to DGCF/data/Esun_week.csv
         - We store train and test data in one csv. We can adjust the train proportion in the command line in next step.
-  - 2. Apply command line for your train data : ```python DGCF.py --network <network> --model DGCF --epochs 50 --method attention --adj```
+  - 2. Apply command line to your train data : ```python DGCF.py --network <network> --model DGCF --epochs 50 --method attention --adj```
         - Example :   ```python3 DGCF.py --network Esun_week --model DGCF --epochs 50 --method attention --adj```  
-        - After that, a folder that contains models will be generated (since the model size is large, so I do not upload it)
+        - After that, a folder of models will be generated (since the model size is large, so I do not upload it)
   - 3. To evaluate the result for test data, apply command line: Example ```python3 evaluate_all.py --network Esun_week --model DGCF --method attention --adj```
         - Every epoch in step2 will generate a model, so after evaluate all, we have 50 test result in a txt file, saved in the folder ```results```  
 - Note : 
