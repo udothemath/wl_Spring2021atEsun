@@ -322,10 +322,10 @@ for j in range(train_end_idx, test_end_idx):
 performance_dict = dict()
 ranks = validation_ranks
 mrr = np.mean([1.0 / r for r in ranks])
-rec10 = sum(np.array(ranks) <= 10)*1.0 / len(ranks)
+rec10 = sum(np.array(ranks) <= 3)*1.0 / len(ranks)
 performance_dict['validation'] = [mrr, rec10]
 
-print(sum(np.array(ranks) <= 10)*1.0)
+print(sum(np.array(ranks) <= 3)*1.0)
 print(len(ranks))
 
 ranks = test_ranks
@@ -333,15 +333,15 @@ mrr = np.mean([1.0 / r for r in ranks])
 #print(ranks)
 #print(len(ranks))
 #print(np.array(ranks) <= 10)
-rec10 = sum(np.array(ranks) <= 10)*1.0 / len(ranks)
+rec10 = sum(np.array(ranks) <= 3)*1.0 / len(ranks)
 performance_dict['test'] = [mrr, rec10]
 
-print(sum(np.array(ranks) <= 10)*1.0)
+print(sum(np.array(ranks) <= 3)*1.0)
 print(len(ranks))
 
 # PRINT AND SAVE THE PERFORMANCE METRICS
 fw = open(output_fname, "a")
-metrics = ['Mean Reciprocal Rank', 'Recall@10']
+metrics = ['Mean Reciprocal Rank', 'Recall@3']
 print( 'end time:', datetime.datetime.now())
 print( '\n\n*** Validation performance of epoch %d ***' % args.epoch)
 fw.write('\n\n*** Validation performance of epoch %d ***\n' % args.epoch)
