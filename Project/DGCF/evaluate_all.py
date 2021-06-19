@@ -317,17 +317,17 @@ for epp in range(0, args.epoch):
     performance_dict = dict()
     ranks = validation_ranks
     mrr = np.mean([1.0 / r for r in ranks])
-    rec10 = sum(np.array(ranks) <= 10)*1.0 / len(ranks)
+    rec10 = sum(np.array(ranks) <= 3)*1.0 / len(ranks)
     performance_dict['validation'] = [mrr, rec10]
 
     ranks = test_ranks
     mrr = np.mean([1.0 / r for r in ranks])
-    rec10 = sum(np.array(ranks) <= 10)*1.0 / len(ranks)
+    rec10 = sum(np.array(ranks) <= 3)*1.0 / len(ranks)
     performance_dict['test'] = [mrr, rec10]
 
     # PRINT AND SAVE THE PERFORMANCE METRICS
     fw = open(output_fname, "a")
-    metrics = ['Mean Reciprocal Rank', 'Recall@10']
+    metrics = ['Mean Reciprocal Rank', 'Recall@3']
     print( 'end time:', datetime.datetime.now())
     print( '\n\n*** Validation performance of epoch %d ***' % epp)
     fw.write('\n\n*** Validation performance of epoch %d ***\n' % epp)
