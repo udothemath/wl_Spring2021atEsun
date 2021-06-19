@@ -22,7 +22,7 @@
     - I modify the code to 0.8 for train and 0.2 for test (just simply set validation = test)
     - Folder **data** contains 3 train data afer preprocessing
     - Folder **results** contains test result txt file 
-    - Since the model saved is large, so I only keep 2 epochs in each dataset 
+    - Since the model size saved in ```saved_models/``` is large, so I do not upload it
 
 # DGCF : Dynamic Graph Collaborative Filtering
 - Copy and slightly modify from https://github.com/CRIPAC-DIG/DGCF
