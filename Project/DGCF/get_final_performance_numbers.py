@@ -39,7 +39,7 @@ validation_performances = np.array(validation_performances)
 test_performances = np.array(test_performances)
 
 if "interaction" in fname:
-    metrics = ['Mean Reciprocal Rank', 'Recall@10']
+    metrics = ['Mean Reciprocal Rank', 'Recall@3']
 else:
     metrics = ['AUC']
 
