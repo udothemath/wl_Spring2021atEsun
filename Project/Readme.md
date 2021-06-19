@@ -1,12 +1,23 @@
 # Jodie: Predicting Dynamic Embedding Trajectory in Temporal Interaction Networks
 - Temporal networks developed by Stanford University
-- Copy and slightly modify from https://github.com/CRIPAC-DIG/DGCF
-- ```$ git clone https://github.com/udothemath/wl_Spring2021atEsun/tree/main/Project/jodie```
+- Copy and slightly modify from https://github.com/srijankr/jodie
+-  Code setup and requirements
+    - ```$ git clone https://github.com/udothemath/wl_Spring2021atEsun/tree/main/Project/jodie```
+    - ```$ pip install -r requirements.txt```
+    - To initialize the directories needed to store data and outputs, use the following command. This will create ```data/, saved_models/, and results/``` directories.
+        - ```$ chmod +x initialize.sh```
+        - ``` $ ./initialize.sh```
 - I add a folder named **data** in the package, which contains (train+test) data according to time in one csv file
     - The data must be converted to the csv form with columns (user_id, item_id, timestamp, state_label, feature1, feature2)
     - Can refer to ```data/Esun_week.csv```
-- Usage:
-
+- Usage: (Example)
+    - (1) Follow the step above
+    - (2) ```$ python jodie.py --network Esun_week --model jodie --epochs 50``` (The model of each epoch will be saved in folder ```saved_models/```)
+    - (3) ```$ ./evaluate_all_epochs.sh <network> interaction``` (MRR and recall@3 of each epoch will be save in folder ```results\```, and print best performance result)
+- For more details, please visit the source code
+- Note
+    - The source code is python2, I modify it to python3 
+    - Recall@10 in source code, I change it to recall@3
 
 # Node2vec
 - Graph embedding method developed by Stanford University
