@@ -19,7 +19,7 @@
     - The source code is python2, I modify it to python3 
     - Recall@10 in source code, I change it to recall@3
     - The original code use 0.8 for train, 0.1 for validation and 0.1 for train
-    - I modify the code to 0.8 for train and 0.2 for test
+    - I modify the code to 0.8 for train and 0.2 for test (just simply set validation = test)
     - Folder **data** contains 3 train data afer preprocessing
     - Folder **results** contains test result txt file 
     - Since the model saved is large, so I only keep 2 epochs in each dataset 
@@ -39,7 +39,7 @@
 - Note : 
   - The source code is python2, I modify it to python3 
   - The original code use 0.8 for train, 0.1 for validation and 0.1 for train
-  - I modify the code to 0.8 for train and 0.2 for test
+  - I modify the code to 0.8 for train and 0.2 for test (just simply set validation = test)
   - Folder **data** contains 3 train data afer preprocessing
   - Folder **results** contains test result txt file 
 
