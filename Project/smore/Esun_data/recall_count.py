@@ -19,6 +19,7 @@ def scores_then_recall(filename, test, recall_num, user_node, user_start, method
     S = [0 for i in range(len(recall_num))]
     Prec = [0 for i in range(len(recall_num))]
     test = pd.read_csv(test,  delim_whitespace=True)
+    MRR_all = 0
     for txt in filename:
         txt = os.path.join(dir_path,txt)
         with open(txt, 'r') as f:
@@ -41,13 +42,13 @@ def scores_then_recall(filename, test, recall_num, user_node, user_start, method
             for k in range(user_node):
                 scores[k].append(sum([x*y for x,y in zip(D[k+user_start],D[items[i]])]))
 
-        # get first 10 recommender items of each user based on the scores
-        N = 10
+        # get recommender items of each user based on the scores
+
         rec_list = [0 for i in range(user_node)]
         Max_scores = [0 for i in range(user_node)]
         for k in range(user_node):
             test_list = scores[k]
-            res = sorted(range(len(test_list)), key = lambda sub: test_list[sub])[-N:]
+            res = sorted(range(len(test_list)), key = lambda sub: test_list[sub])[-len(test_list):]
             rec_list[k] = [items[i] for i in res]
             Max_scores[k] = [test_list[i] for i in res]
             
@@ -57,7 +58,15 @@ def scores_then_recall(filename, test, recall_num, user_node, user_start, method
 
         rec_list = [rec_list[i][::-1] for i in range(len(rec_list))]
 
-
+        # MRR
+        MRR=0
+        for i in range(len(test_item)):
+            for idx in range(user_node):
+                if list(test['user_id'])[i]==idx and test_item[i] in rec_list[idx]:
+                    place = rec_list[idx].index(test_item[i])
+                    MRR += 1/(place+1)
+        MRR_all += MRR/len(test_item)
+        
         for num in range(len(recall_num)):
             # Recall@num
             s = 0
@@ -73,7 +82,7 @@ def scores_then_recall(filename, test, recall_num, user_node, user_start, method
                 K = list(set(test[test['user_id']==idx]['item_id']) & set(rec_list[idx][0:recall_num[num]]))
                 P+= len(K)/recall_num[num]
             Prec[num] += P/user_node
-
+        
 
 
     if method != None :
@@ -81,6 +90,8 @@ def scores_then_recall(filename, test, recall_num, user_node, user_start, method
         fw.write(f'\n========= {method} =========')
         print(f'========= {method} =========')
 
+    MRR_all = MRR_all / len(filename)
+    
     S = np.array(S)/len(test)/len(filename)
     Prec = np.array(Prec)/len(filename)
     for i in range(len(recall_num)):
@@ -89,11 +100,12 @@ def scores_then_recall(filename, test, recall_num, user_node, user_start, method
         fw.write(f'\nAverage prec@{recall_num[i]} of {len(filename)} result : {Prec[i]}')
         print(f'Average rec@{recall_num[i]} of {len(filename)} result :',S[i])
         print(f'Average prec@{recall_num[i]} of {len(filename)} result :',Prec[i])
-
+    
+    fw.write(f'\nMRR : {MRR_all}')
+    print(f'MRR result :',MRR_all)
+    
 start_time = time.time()
 dir_path = args.dir_path
 filename = os.listdir(dir_path)
 scores_then_recall(filename, args.test, args.recall_num, args.user_node, args.user_start, args.method)
 print("--- %s seconds ---" % (time.time() - start_time))
-
-
