@@ -1,0 +1,49 @@
+
+========= Node2vec_week_without_feature =========
+Average rec@3 of 100 result : 0.003564929693961952
+Average prec@3 of 100 result : 0.13142857142857134
+Average rec@5 of 100 result : 0.006410256410256411
+Average prec@5 of 100 result : 0.1402857142857142
+Average rec@10 of 100 result : 0.013986765922249794
+Average prec@10 of 100 result : 0.15142857142857127
+MRR : 0.0104306187085
+========= Node2vec_time_without_feature =========
+Average rec@3 of 100 result : 0.0033664185277088505
+Average prec@3 of 100 result : 0.1527777777777776
+Average rec@5 of 100 result : 0.006004962779156328
+Average prec@5 of 100 result : 0.1553333333333331
+Average rec@10 of 100 result : 0.012324234904880067
+Average prec@10 of 100 result : 0.16216666666666663
+MRR : 0.00966391446394
+========= Node2vec_weektime_without_feature =========
+Average rec@3 of 100 result : 0.0035153019023986764
+Average prec@3 of 100 result : 0.03079365079365075
+Average rec@5 of 100 result : 0.0060794044665012405
+Average prec@5 of 100 result : 0.031190476190476154
+Average rec@10 of 100 result : 0.013738626964433415
+Average prec@10 of 100 result : 0.03138095238095234
+MRR : 0.0113757933346
+========= Node2vec_week_with_feature =========
+Average rec@3 of 100 result : 0.00727874276261373
+Average prec@3 of 100 result : 0.27619047619047576
+Average rec@5 of 100 result : 0.0125889164598842
+Average prec@5 of 100 result : 0.27285714285714247
+Average rec@10 of 100 result : 0.02555004135649297
+Average prec@10 of 100 result : 0.2722857142857143
+MRR : 0.0177782612008
+========= Node2vec_time_with_feature =========
+Average rec@3 of 100 result : 0.007303556658395368
+Average prec@3 of 100 result : 0.3016666666666667
+Average rec@5 of 100 result : 0.012448304383788255
+Average prec@5 of 100 result : 0.30966666666666665
+Average rec@10 of 100 result : 0.026029776674937964
+Average prec@10 of 100 result : 0.3221666666666666
+MRR : 0.0176252774695
+========= Node2vec_weektime_with_feature =========
+Average rec@3 of 100 result : 0.008684863523573201
+Average prec@3 of 100 result : 0.05238095238095231
+Average rec@5 of 100 result : 0.014466501240694788
+Average prec@5 of 100 result : 0.05219047619047612
+Average rec@10 of 100 result : 0.03180314309346568
+Average prec@10 of 100 result : 0.05473809523809514
+MRR : 0.0203921467276
