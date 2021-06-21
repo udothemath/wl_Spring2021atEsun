@@ -49,6 +49,8 @@
 - I add a folder named **Esun_data** in the package, which apply Node2vec to Esun dataset 
 - There are some subfolders and files contained in **Esun_data**:
     - **data**: Contained train and test csv after preprocess
+    - **results**: contained embedding results and a txt file which save MRR and recall
+- Usage: ```cd Esun_data/```, then ```sh node2vec_emb.sh ```
 - Note: Please use python2
 
 # Smore 
