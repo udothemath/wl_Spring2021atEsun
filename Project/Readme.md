@@ -28,7 +28,7 @@
 - Copy and slightly modify from https://github.com/CRIPAC-DIG/DGCF
 - ```$ git clone https://github.com/udothemath/wl_Spring2021atEsun/tree/main/Project/DGCF```
 - To initialize the directories needed to store data and outputs, use the following command. This will create ```data/, saved_models/, and results/``` directories.
-        - ``` $ ./initialize.sh```
+    - ``` $ ./initialize.sh```
 - Usage : 
   - 1. The data must be converted to the csv form with columns (user_id, item_id, timestamp, state_label, feature1, feature2)
         - Can refer to DGCF/data/Esun_week.csv
