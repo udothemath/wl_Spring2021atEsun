@@ -1,3 +1,7 @@
+# Notes
+- For Jodie and DGCF, suggest to use the original source code if you want to apply to another dataset, because I have modified the source code. If you want to change the train,validation and test in my code, you need to delete and add some codes, since the source code only support train proprotion <= 0.8, and since our data do not need validation, so I make validation data equal to test data, and train proportion = 0.9
+- For node2vec and smore, actually they are easy to use, you can read the readme file in their source code, I have not changed anything of the source code, I only add a folder named Esun_data. In Esun_data folder, it contains recall,precision,MRR code and shell script which run the node2vec, deepwalk and hoprec 100 epochs, calculate recall,precision and MRR for each epoch, finally average them.
+
 # Jodie: Predicting Dynamic Embedding Trajectory in Temporal Interaction Networks
 - Temporal networks developed by Stanford University
 - Copy and slightly modify from https://github.com/srijankr/jodie
@@ -16,7 +20,7 @@
     - (3) ```$ ./evaluate_all_epochs.sh <network> interaction``` (MRR and recall@3 of each epoch will be save in folder ```results\```, and print best performance result)
 - For more details, please visit the source code
 - Note
-    - The source code is python2, I modify it to python3 
+    - The source code is written in python2, I modify it to python3 
     - Recall@10 in source code, I change it to recall@3
     - The original code use 0.8 for train, 0.1 for validation and 0.1 for train
     - I modify the code to 0.8 for train and 0.2 for test (just simply set validation = test)
@@ -39,7 +43,7 @@
   - 3. To evaluate the result for test data, apply command line: Example ```python3 evaluate_all.py --network Esun_week --model DGCF --method attention --adj```
         - Every epoch in step b will generate a model, so after evaluate all, we have 50 test result in a txt file, saved in the folder **results**
 - Note : 
-  - The source code is python2, I modify it to python3 
+  - The source code is written in python2, I modify it to python3 
   - The original code use 0.8 for train, 0.1 for validation and 0.1 for train
   - I modify the code to 0.8 for train and 0.2 for test (just simply set validation = test)
   - Folder **data** contains 3 train data afer preprocessing
