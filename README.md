@@ -1,16 +1,16 @@
 # wl_Spring2021atEsun
 ## Weile's code for practice
 
-#### GCN,GAT.GraphSage for Cora dataset (04.05.2021)
-- Use pytorch geometric
-- The source code and dataset for ICDM2020 paper: Dynamic Graph Collaborative Filtering, implemented in Pytorch.
+#### GCN_Cora.ipynb (04.05.2021)
+- GCN,GAT.GraphSage for Cora dataset 
 
-#### Autoencoder and KNN for Credit Card Fraud Detection (17.03.2021)
+#### Credit Card Fraud Detection Using Autoencoder.ipynb (17.03.2021)
+- Autoencoder and KNN for Credit Card Fraud Detection 
 - Dataset from Kaggle : https://www.kaggle.com/mlg-ulb/creditcardfraud
 - Autoencoder code from https://github.com/vimalkansal/credit_card_fraud_detection/blob/master/project/credit_card_fraud_detection.ipynb
 - KNN code from https://www.kaggle.com/maneesha96/fraud-detection-in-transaction-data-using-knn#7.-Data-splitting
 
-#### Node_Classification (07.03.2021)
+#### Node_Classification.ipynb (07.03.2021)
 - (Cora dataset)
 - from https://colab.research.google.com/drive/14OvFnAXggxB8vM4e8vSURUp1TaKnovzX?usp=sharing vis PyTorch geometric
 
